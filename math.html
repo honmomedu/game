@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>វិញ្ញាសាគណិតវិទ្យា និងអត្រាកំណែ</title>
+    <!-- MathJax Configuration -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [], // Not using $$ as requested, only $
+                processEscapes: true
+            }
+        };
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Khmer+OS+Battambang&family=Khmer+OS+Muol+Light&display=swap');
+        body {
+            font-family: 'Khmer OS Battambang', Arial, sans-serif;
+            line-height: 1.8;
+            padding: 30px;
+            max-width: 950px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn-export {
+            background-color: #2563eb;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'Khmer OS Battambang', sans-serif;
+            font-size: 16px;
+            margin-bottom: 25px;
+            transition: background-color 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-export:hover {
+            background-color: #1d4ed8;
+        }
+        #display-content {
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="btn-export" onclick="exportToWord()">
+        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+        ទាញយកជា Word (.doc)
+    </button>
+
+    <div class="container" id="display-content">
+        <!-- The content will be injected here by JavaScript -->
+    </div>
+
+    <!-- RAW HTML SCRIPT BLOCK -->
+    <!-- This section holds the raw content with $...$ intact to preserve MathType format when exported -->
+    <script type="text/html" id="raw-content">
+        <div style="font-family: 'Khmer OS Battambang', sans-serif; font-size: 11pt; line-height: 1.5;">
+            
+            <!-- Header Table -->
+            <table style="width: 100%; border-collapse: collapse; border: none; margin-bottom: 20px;">
+                <tr>
+                    <td style="width: 50%; vertical-align: top;">
+                        <b>ប្រឡងសញ្ញាបត្រមធ្យមសិក្សាទុតិយភូមិ</b><br>
+                        សម័យប្រឡង : <b>១៨ សីហា ២០២៥</b><br>
+                        វិញ្ញាសាទី ៣៦ : <b>គណិតវិទ្យា</b><br>
+                        រយៈពេល &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <b>១៥០ នាទី</b><br>
+                        រៀបរៀងដោយ &nbsp;: <b>នាយ ម៉េងគ្រី</b><br>
+                        ប្រធាន៖ <hr style="width: 80%; display: inline-block; margin: 0; vertical-align: bottom;">
+                    </td>
+                    <td style="width: 50%; vertical-align: top;">
+                        មណ្ឌលប្រឡង : ...................................................<br>
+                        លេខបន្ទប់ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: ...................................................<br>
+                        លេខតុ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: ...................................................<br>
+                        ហត្ថលេខាអនុរក្ស: ...................................................<br>
+                        ឈ្មោះបេក្ខជន &nbsp;: ...................................................
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Problem I -->
+            <p><b><span style="border: 1px solid black; border-radius: 50%; padding: 0 5px;">I</span> (២០ ពិន្ទុ) គណនាលីមីត៖</b></p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;ក. $ \lim_{x \to +\infty} \frac{2x+3-\ln x}{x+2\ln x} $
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                ខ. $ \lim_{x \to \frac{\pi}{6}} \frac{2\sin x - 1}{1-2\cos 2x} $
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                គ. $ \lim_{x \to +\infty} \left[ \sqrt{x+2} \left( \sqrt{x-1} - \sqrt{x-5} \right) \right] $
+                <br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;ឃ. $ \lim_{x \to 0} \left( \frac{e^{x^2} - \sqrt[3]{1+x^2}}{\ln(1+x^2)} \right) $
+            </p>
+
+            <!-- Problem II -->
+            <p><b><span style="border: 1px solid black; border-radius: 50%; padding: 0 2px;">II</span> (២០ ពិន្ទុ) គណនាអាំងតេក្រាលខាងក្រោម៖</b></p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp; $ I = \int (x^2+1)x dx $
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                $ J = \int (3\sin 3x - \cos^2 x) dx $
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                $ K = \int \frac{2}{x}(2-\ln^3 x) dx $
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                $ L = \int (2+\tan^2 x) dx $
+            </p>
+
+            <!-- Problem III -->
+            <p><b><span style="border: 1px solid black; border-radius: 50%; padding: 0 1px;">III</span> (២០ ពិន្ទុ)</b> ក្នុងតម្រុយ $ (o, \vec{i}, \vec{j}, \vec{k}) $ គេមានចំនុច $ A(1,0,1) ; C(2,1,0) , D(1,3,1) $ និង វ៉ិចទ័រ $ \vec{AB} = (-1, 2, 1) $ ។</p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;ក. គណនាកូអរដោនេនៃចំនុច $ B $ ។ រកសមីការប្លង់ $ P $ ដែលកាត់តាមចំនុច $ A $ ហើយកែងនឹងវ៉ិចទ័រ $ \vec{AB} $ ។<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;ខ. គណនា $ \vec{AC} ; \vec{CD} ; \vec{AC} \times \vec{CD} $ និង $ \vec{AB} \cdot \vec{AC} $ រួចបង្ហាញថា $ ABCD $ ជាចតុកោណកែង ។<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;គ. រកសមីការប្លង់ $ (ABC) $ ។<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;ទាញរកផ្ទៃក្រឡានៃចតុកោណកែង $ ABCD $ មាតចតុកមុខ $ OABC $ និងចម្ងាយពី $ O $ ទៅប្លង់ $ (ABC) $ ។
+            </p>
+
+            <!-- Problem IV -->
+            <p><b><span style="border: 1px solid black; border-radius: 50%; padding: 0 2px;">IV</span> (៣០ ពិន្ទុ)</b> គេមាន $ f $ កំណត់ដោយ $ y = f(x) = x - 1 + 2e^{-x} $ ហើយមានក្រាប $ (C) $ ។</p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;១. រក $ \lim_{x \to +\infty} f(x) $ ។ រកសមីការអាស៊ីមតូត $ (L_1) $ ត្រង់នៃក្រាប $ (C) $ ។ បង្ហាញថា $ f $ មានអប្បបរមាត្រង់ $ x = \ln 2 $ ។<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;២. សង់តារាងអថេរភាពនៃអនុគមន៍ $ f $ ។ រកសមីការ $ (L_2) $ ដែលប៉ះក្រាប $ (C) $ ត្រង់ចំនុច $ A(0,1) $ ។<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;៣. សង់បន្ទាត់ $ (L_1) ; (L_2) $ និង $ (C) $ ក្នុងតម្រុយតែមួយ ។<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;៤. គណនាក្រឡាផ្ទៃប្លង់កំណត់ដោយអាស៊ីមតូតទ្រេត $ L_1 $ និងក្រាប $ (C) $ ត្រង់ $ x=0 $ និង $ x=1 $ ។
+            </p>
+
+            <!-- Problem V -->
+            <p><b><span style="border: 1px solid black; border-radius: 50%; padding: 0 4px;">V</span> (៣០ ពិន្ទុ)</b> ផ្នែកទី១៖ អនុគមន៍ $ g $ កំណត់លើចន្លោះ $ (0, +\infty) $ ដោយ $ g(x) = x^3 - x - 2\ln x + 3 $ ។</p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;1.a. បង្ហាញថាគ្រប់ $ x \in (0, +\infty) : 3x^3 - x - 2 = (x-1)(3x^2+3x+2) $ ។<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. បង្ហាញថាគ្រប់ $ x \in (0, +\infty) : g'(x) = \frac{(x-1)(3x^2+3x+2)}{x} $ ។<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;2. a. បង្ហាញថា $ \forall x \in (0, +\infty) : \frac{3x^2+3x+2}{x} > 0 $ ។<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;3.a. សិក្សាសញ្ញា $ g'(x) $ តាម $ x - 1 $ ចុះលើចន្លោះ $ (0, 1] $ និងកើនលើចន្លោះ $ [1, +\infty) $ ។<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. បញ្ជាក់ថា $ g(x) > 0 $ ចំពោះគ្រប់ $ x \in (0, +\infty) $ ។
+            </p>
+            <p>ផ្នែកទីពីរ៖ អនុគមន៍ $ f $ កំណត់លើចន្លោះ $ (0, +\infty) $ ដោយ $ f(x) = x - 1 + \frac{x-1+\ln x}{x^2} $ មានក្រាប $ (C_f) $ ក្នុងតម្រុយ $ (o, \vec{i}, \vec{j}) $ ។</p>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;1. បង្ហាញថា $ \forall x \in (0, +\infty) : f'(x) = \frac{g(x)}{x^3} $ រួចបង្ហាញថា $ f $ ជាអនុគមន៍កើនជានិច្ចលើចន្លោះ $ (0, +\infty) $ ។<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;2.a. បង្ហាញថា $ \lim_{x \to +\infty} \frac{x-1+\ln x}{x^2} = 0 $ និង $ \lim_{x \to +\infty} f(x) = +\infty $ ។<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. បង្ហាញថាបន្ទាត់ $ (\Delta) $ មានសមីការ $ y = x - 1 $ ជាអាស៊ីមតូតទ្រេតនៃខ្សែរគោង $ (C_f) $ កាលណា $ x $ ខិតជិត $ +\infty $ ។<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. សិក្សាទីតាំងធៀបរវាងក្រាប $ (C_f) $ ជាមួយបន្ទាត់ $ \Delta $ ។<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;4. a. បង្ហាញថា $ y = 3(x - 1) $ ជាបន្ទាត់ប៉ះក្រាប $ (C_f) $ ត្រង់ចំនុចមានអាប់ស៊ីស $ x=1 $ ។
+            </p>
+
+            <br><br><br>
+            <hr style="border: 1px dashed black;">
+            <h2 style="text-align: center; font-family: 'Khmer OS Muol Light', sans-serif;">អត្រាកំណែ (រៀបចំដោយ AI)</h2>
+
+            <!-- Answer Key Section -->
+            <p><b>I. គណនាលីមីត៖</b></p>
+            <p>
+                <b>ក.</b> $ \lim_{x \to +\infty} \frac{2x+3-\ln x}{x+2\ln x} = \lim_{x \to +\infty} \frac{x(2 + \frac{3}{x} - \frac{\ln x}{x})}{x(1 + 2\frac{\ln x}{x})} $<br>
+                ដោយ $ \lim_{x \to +\infty} \frac{\ln x}{x} = 0 $ និង $ \lim_{x \to +\infty} \frac{3}{x} = 0 $<br>
+                ដូចនេះ $ \lim_{x \to +\infty} \frac{2x+3-\ln x}{x+2\ln x} = \frac{2}{1} = 2 $ ។
+            </p>
+            <p>
+                <b>ខ.</b> $ \lim_{x \to \frac{\pi}{6}} \frac{2\sin x - 1}{1-2\cos 2x} $ មានរាង $ \frac{0}{0} $ <br>
+                តាមរូបមន្ត L'Hopital ៖ $ = \lim_{x \to \frac{\pi}{6}} \frac{(2\sin x - 1)'}{(1-2\cos 2x)'} = \lim_{x \to \frac{\pi}{6}} \frac{2\cos x}{4\sin 2x} $<br>
+                $ = \frac{2\cos(\pi/6)}{4\sin(\pi/3)} = \frac{2(\sqrt{3}/2)}{4(\sqrt{3}/2)} = \frac{2}{4} = \frac{1}{2} $ ។
+            </p>
+            <p>
+                <b>គ.</b> $ \lim_{x \to +\infty} \left[ \sqrt{x+2} \left( \sqrt{x-1} - \sqrt{x-5} \right) \right] $<br>
+                គុណនិងចែកនឹងកន្សោមឆ្លាស់៖ $ = \lim_{x \to +\infty} \left[ \sqrt{x+2} \frac{(x-1) - (x-5)}{\sqrt{x-1} + \sqrt{x-5}} \right] = \lim_{x \to +\infty} \frac{4\sqrt{x+2}}{\sqrt{x-1} + \sqrt{x-5}} $<br>
+                ចាប់ $ \sqrt{x} $ ជាកត្តាសម្រួល៖ $ = \lim_{x \to +\infty} \frac{4\sqrt{1+\frac{2}{x}}}{\sqrt{1-\frac{1}{x}} + \sqrt{1-\frac{5}{x}}} = \frac{4}{1+1} = 2 $ ។
+            </p>
+            <p>
+                <b>ឃ.</b> $ \lim_{x \to 0} \frac{e^{x^2} - \sqrt[3]{1+x^2}}{\ln(1+x^2)} $ (តាង $ u = x^2 \implies u \to 0 $) <br>
+                $ = \lim_{u \to 0} \frac{e^u - (1+u)^{1/3}}{\ln(1+u)} = \lim_{u \to 0} \frac{e^u - 1 + 1 - (1+u)^{1/3}}{u \frac{\ln(1+u)}{u}} = \lim_{u \to 0} \frac{\frac{e^u - 1}{u} - \frac{(1+u)^{1/3} - 1}{u}}{\frac{\ln(1+u)}{u}} $<br>
+                ដោយ $ \lim_{u \to 0} \frac{e^u - 1}{u} = 1 $ , $ \lim_{u \to 0} \frac{(1+u)^n - 1}{u} = n = \frac{1}{3} $ និង $ \lim_{u \to 0} \frac{\ln(1+u)}{u} = 1 $<br>
+                ដូចនេះ លីមីត $ = \frac{1 - \frac{1}{3}}{1} = \frac{2}{3} $ ។
+            </p>
+
+            <br>
+            <p><b>II. គណនាអាំងតេក្រាល៖</b></p>
+            <p>
+                $ I = \int (x^2+1)x dx = \int (x^3 + x) dx = \frac{x^4}{4} + \frac{x^2}{2} + C $ ។
+            </p>
+            <p>
+                $ J = \int (3\sin 3x - \cos^2 x) dx = \int \left( 3\sin 3x - \frac{1+\cos 2x}{2} \right) dx $<br>
+                $ J = \int 3\sin 3x dx - \frac{1}{2} \int dx - \frac{1}{2} \int \cos 2x dx = -\cos 3x - \frac{1}{2}x - \frac{1}{4}\sin 2x + C $ ។
+            </p>
+            <p>
+                $ K = \int \frac{2}{x}(2-\ln^3 x) dx $ (តាង $ u = \ln x \implies du = \frac{1}{x} dx $)<br>
+                $ K = \int 2(2-u^3) du = 4u - \frac{2u^4}{4} + C = 4\ln x - \frac{1}{2}\ln^4 x + C $ ។
+            </p>
+            <p>
+                $ L = \int (2+\tan^2 x) dx = \int (1 + (1+\tan^2 x)) dx = \int 1 dx + \int (1+\tan^2 x) dx = x + \tan x + C $ ។
+            </p>
+
+            <br>
+            <p><b>III. ធរណីមាត្រក្នុងលំហ៖</b></p>
+            <p>គេមាន $ A(1,0,1) , C(2,1,0) , D(1,3,1) $ និង $ \vec{AB} = (-1, 2, 1) $ ។</p>
+            <p>
+                <b>ក. គណនាកូអរដោនេនៃចំនុច $ B $៖</b><br>
+                $ \vec{AB} = (x_B - x_A, y_B - y_A, z_B - z_A) = (x_B - 1, y_B - 0, z_B - 1) $<br>
+                ផ្ទៀងផ្ទាត់នឹង $ \vec{AB} = (-1, 2, 1) \implies x_B-1=-1 \implies x_B=0 , y_B=2 , z_B-1=1 \implies z_B=2 $<br>
+                ដូចនេះ $ B(0, 2, 2) $ ។<br><br>
+                <b>រកសមីការប្លង់ $ P $៖</b><br>
+                ប្លង់ P កាត់តាម A(1,0,1) មានវ៉ិចទ័រណ័រម៉ាល់ $ \vec{n} = \vec{AB} = (-1, 2, 1) $<br>
+                $ P: -1(x-1) + 2(y-0) + 1(z-1) = 0 \implies -x + 1 + 2y + z - 1 = 0 \implies -x + 2y + z = 0 $ ។
+            </p>
+            <p>
+                <b>ខ. គណនាវ៉ិចទ័រ៖</b><br>
+                $ \vec{AC} = (2-1, 1-0, 0-1) = (1, 1, -1) $ ។<br>
+                $ \vec{CD} = (1-2, 3-1, 1-0) = (-1, 2, 1) $ ។<br>
+                $ \vec{AC} \times \vec{CD} = \begin{vmatrix} \vec{i} & \vec{j} & \vec{k} \\ 1 & 1 & -1 \\ -1 & 2 & 1 \end{vmatrix} = \vec{i}(1 - (-2)) - \vec{j}(1 - 1) + \vec{k}(2 - (-1)) = (3, 0, 3) $ ។<br>
+                $ \vec{AB} \cdot \vec{AC} = (-1)(1) + (2)(1) + (1)(-1) = -1 + 2 - 1 = 0 $ ។<br><br>
+                <b>បង្ហាញថា $ ABDC $ ជាចតុកោណកែង (ចំណាំ៖ តាមលំដាប់កំពូលគឺ ABDC)៖</b><br>
+                គេមាន $ \vec{AB} = (-1, 2, 1) $ និង $ \vec{CD} = (-1, 2, 1) $ នាំឲ្យ $ \vec{AB} = \vec{CD} $ ។ ដូចនេះ $ ABDC $ ជាប្រលេឡូក្រាម។<br>
+                ម្យ៉ាងទៀត $ \vec{AB} \cdot \vec{AC} = 0 \implies \vec{AB} \perp \vec{AC} $ (មានមុំកែងមួយ)។<br>
+                សរុបមក ប្រលេឡូក្រាមមានមុំកែងមួយ ជាចតុកោណកែង ដូចនេះ $ ABDC $ ជាចតុកោណកែង។
+            </p>
+            <p>
+                <b>គ. រកសមីការប្លង់ $ (ABC) $៖</b><br>
+                មានវ៉ិចទ័រណ័រម៉ាល់ $ \vec{n} = \vec{AB} \times \vec{AC} = \begin{vmatrix} \vec{i} & \vec{j} & \vec{k} \\ -1 & 2 & 1 \\ 1 & 1 & -1 \end{vmatrix} = (-3, 0, -3) $<br>
+                យក $ \vec{n}' = (1, 0, 1) $ ជាវ៉ិចទ័រណ័រម៉ាល់។ កាត់តាម A(1,0,1):<br>
+                $ (ABC): 1(x-1) + 0(y-0) + 1(z-1) = 0 \implies x + z - 2 = 0 $ ។<br><br>
+                <b>ផ្ទៃក្រឡាចតុកោណកែង៖</b> $ S = |\vec{AB} \times \vec{AC}| = \sqrt{(-3)^2 + 0^2 + (-3)^2} = \sqrt{18} = 3\sqrt{2} $ ឯកតាផ្ទៃ។<br>
+                <b>មាតចតុកមុខ $ OABC $៖</b> $ V = \frac{1}{6} |(\vec{AB} \times \vec{AC}) \cdot \vec{AO}| $<br>
+                $ \vec{AO} = (-1, 0, -1) \implies (\vec{AB} \times \vec{AC}) \cdot \vec{AO} = (-3)(-1) + 0 + (-3)(-1) = 6 $<br>
+                $ V = \frac{1}{6} \times 6 = 1 $ ឯកតាមាត។<br>
+                <b>ចម្ងាយពី $ O(0,0,0) $ ទៅប្លង់ $ (ABC): x + z - 2 = 0 $៖</b><br>
+                $ d(O, ABC) = \frac{|0 + 0 - 2|}{\sqrt{1^2 + 0^2 + 1^2}} = \frac{2}{\sqrt{2}} = \sqrt{2} $ ឯកតាប្រវែង។
+            </p>
+
+            <br>
+            <p><b>IV. សិក្សាអនុគមន៍៖ $ f(x) = x - 1 + 2e^{-x} $</b></p>
+            <p>
+                <b>១.</b> $ \lim_{x \to +\infty} f(x) = \lim_{x \to +\infty} (x - 1 + 2e^{-x}) = +\infty - 1 + 0 = +\infty $ ។<br>
+                ដោយ $ \lim_{x \to +\infty} [f(x) - (x-1)] = \lim_{x \to +\infty} 2e^{-x} = 0 $ នោះបន្ទាត់ $ (L_1): y = x - 1 $ ជាអាស៊ីមតូតទ្រេត។<br>
+                $ f'(x) = 1 - 2e^{-x} $ ។ ឲ្យ $ f'(x) = 0 \implies 2e^{-x} = 1 \implies e^x = 2 \implies x = \ln 2 $ ។<br>
+                ដោយ $ f''(x) = 2e^{-x} > 0 $ ជានិច្ច នោះត្រង់ $ x = \ln 2 $ អនុគមន៍មានតម្លៃអប្បបរមា។
+            </p>
+            <p>
+                <b>២.</b> សង់តារាងអថេរភាព (សិស្សអាចគូសតារាងដោយខ្លួនឯង) ៖ អនុគមន៍ចុះពី $ -\infty $ ដល់ $ \ln 2 $ និងកើនពី $ \ln 2 $ ទៅ $ +\infty $។<br>
+                សមីការបន្ទាត់ប៉ះ $ (L_2) $ ត្រង់ $ A(0,1) $: $ x_0 = 0 , y_0 = f(0) = 1 $<br>
+                $ f'(0) = 1 - 2e^0 = -1 $<br>
+                $ (L_2): y - y_0 = f'(x_0)(x - x_0) \implies y - 1 = -1(x - 0) \implies y = -x + 1 $ ។
+            </p>
+            <p><b>៣.</b> (ក្រាបសិស្សអាចសង់បានដោយខ្លួនឯង ផ្អែកលើតារាងអថេរភាព និងអាស៊ីមតូត)</p>
+            <p>
+                <b>៤. គណនាក្រឡាផ្ទៃ៖</b><br>
+                $ S = \int_{0}^{1} |f(x) - (x-1)| dx = \int_{0}^{1} 2e^{-x} dx = [-2e^{-x}]_{0}^{1} = -2e^{-1} - (-2e^0) = 2 - \frac{2}{e} $ ឯកតាផ្ទៃ។
+            </p>
+
+            <br>
+            <p><b>V. សិក្សាអនុគមន៍២៖</b></p>
+            <p><b>ផ្នែកទី១៖ $ g(x) = x^3 - x - 2\ln x + 3 $</b></p>
+            <p>
+                <b>1.a.</b> ពន្លាតអង្គទី២៖ $ (x-1)(3x^2+3x+2) = 3x^3 + 3x^2 + 2x - 3x^2 - 3x - 2 = 3x^3 - x - 2 $ ពិត។<br>
+                <b>b.</b> $ g'(x) = 3x^2 - 1 - \frac{2}{x} = \frac{3x^3 - x - 2}{x} $<br>
+                ជំនួសតាមសម្រាយខាងលើ៖ $ g'(x) = \frac{(x-1)(3x^2+3x+2)}{x} $ ពិត។
+            </p>
+            <p>
+                <b>2.a.</b> ពិនិត្យកន្សោម $ 3x^2+3x+2 $: មាន $ \Delta = 3^2 - 4(3)(2) = 9 - 24 < 0 $ និង $ a = 3 > 0 $ នាំឲ្យ $ 3x^2+3x+2 > 0 $ ជានិច្ច។<br>
+                ដោយ $ x \in (0, +\infty) \implies x > 0 $ ដូច្នេះ $ \frac{3x^2+3x+2}{x} > 0 $ ជានិច្ច ពិត។
+            </p>
+            <p>
+                <b>3.a.</b> ដោយកត្តា $ \frac{3x^2+3x+2}{x} > 0 $ នោះសញ្ញា $ g'(x) $ យកតាមសញ្ញា $ x - 1 $។<br>
+                - បើ $ x \in (0, 1) $ នោះ $ x - 1 < 0 \implies g'(x) < 0 $ នាំឲ្យអនុគមន៍ចុះ។<br>
+                - បើ $ x \in (1, +\infty) $ នោះ $ x - 1 > 0 \implies g'(x) > 0 $ នាំឲ្យអនុគមន៍កើន។<br>
+                <b>b.</b> តាមការសិក្សាខាងលើ អនុគមន៍ $ g $ មានតម្លៃអប្បបរមាត្រង់ $ x=1 $ គឺ $ g(1) = 1^3 - 1 - 2(0) + 3 = 3 $ ។<br>
+                ដោយតម្លៃតូចបំផុតរបស់វា $ 3 > 0 $ នោះ $ g(x) > 0 $ ជានិច្ចចំពោះគ្រប់ $ x \in (0, +\infty) $ ។
+            </p>
+
+            <p><b>ផ្នែកទីពីរ៖ $ f(x) = x - 1 + \frac{x-1+\ln x}{x^2} $</b></p>
+            <p>
+                <b>1.</b> ដេរីវេនៃ $ \frac{x-1+\ln x}{x^2} $ (ប្រើរូបមន្ត $ u/v $) ៖<br>
+                $ \left( \frac{x-1+\ln x}{x^2} \right)' = \frac{(1+\frac{1}{x})x^2 - (x-1+\ln x)(2x)}{x^4} = \frac{x^2+x - 2x^2 + 2x - 2x\ln x}{x^4} = \frac{-x^2+3x-2x\ln x}{x^4} $<br>
+                $ = \frac{-x+3-2\ln x}{x^3} $<br>
+                $ f'(x) = 1 + \frac{-x+3-2\ln x}{x^3} = \frac{x^3 - x + 3 - 2\ln x}{x^3} = \frac{g(x)}{x^3} $ ។<br>
+                ដោយ $ g(x) > 0 $ និង $ x^3 > 0 $ លើ $ (0, +\infty) $ នោះ $ f'(x) > 0 $ ជានិច្ច ទាញបាន $ f $ ជាអនុគមន៍កើនជានិច្ច។
+            </p>
+            <p>
+                <b>2.a.</b> $ \lim_{x \to +\infty} \frac{x-1+\ln x}{x^2} = \lim_{x \to +\infty} (\frac{1}{x} - \frac{1}{x^2} + \frac{\ln x}{x^2}) = 0 - 0 + 0 = 0 $ ។<br>
+                $ \lim_{x \to +\infty} f(x) = \lim_{x \to +\infty} (x - 1 + 0) = +\infty $ ។<br>
+                <b>c.</b> ដោយ $ \lim_{x \to +\infty} [f(x) - (x-1)] = \lim_{x \to +\infty} \frac{x-1+\ln x}{x^2} = 0 $ នោះ $ (\Delta): y = x - 1 $ ជាអាស៊ីមតូតទ្រេត។<br>
+                <b>d.</b> សិក្សាសញ្ញា $ f(x) - y = \frac{x-1+\ln x}{x^2} $ ។ ដោយ $ x^2 > 0 $ សញ្ញាយកតាមភាគយក។<br>
+                តាង $ h(x) = x - 1 + \ln x \implies h'(x) = 1 + 1/x > 0 $ (កើនជានិច្ច)។ មានឫស $ h(1) = 0 $។<br>
+                - បើ $ x \in (0, 1) $ នោះ $ h(x) < 0 \implies (C_f) $ ស្ថិតនៅក្រោម $ \Delta $ ។<br>
+                - បើ $ x = 1 $ នោះ $ h(1) = 0 \implies (C_f) $ កាត់ $ \Delta $ ត្រង់ $ (1, 0) $ ។<br>
+                - បើ $ x > 1 $ នោះ $ h(x) > 0 \implies (C_f) $ ស្ថិតនៅពីលើ $ \Delta $ ។
+            </p>
+            <p>
+                <b>4. a.</b> បង្ហាញថាបន្ទាត់ប៉ះត្រង់ $ x=1 $ ៖<br>
+                $ x_0 = 1 \implies y_0 = f(1) = 1 - 1 + \frac{1-1+0}{1^2} = 0 $<br>
+                មេគុណប្រាប់ទិស $ f'(1) = \frac{g(1)}{1^3} = \frac{3}{1} = 3 $<br>
+                សមីការបន្ទាត់ប៉ះ៖ $ y - y_0 = f'(x_0)(x - x_0) \implies y - 0 = 3(x - 1) \implies y = 3(x - 1) $ ពិត។
+            </p>
+        </div>
+    </script>
+
+    <script>
+        // Inject the raw HTML into the display div, then MathJax will render it automatically on load
+        document.getElementById('display-content').innerHTML = document.getElementById('raw-content').innerHTML;
+
+        // Function to export the RAW HTML (with $...$) directly to Word
+        function exportToWord() {
+            var rawContent = document.getElementById('raw-content').innerHTML;
+            
+            // Add Word specific HTML wrapping
+            var preHtml = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>វិញ្ញាសាគណិតវិទ្យា</title></head><body>";
+            var postHtml = "</body></html>";
+            
+            var fullHtml = preHtml + rawContent + postHtml;
+
+            // Create a Blob containing the HTML with correct MIME type
+            var blob = new Blob(['\ufeff', fullHtml], {
+                type: 'application/msword'
+            });
+            
+            var url = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(fullHtml);
+            var filename = 'វិញ្ញាសាគណិតវិទ្យា.doc';
+
+            var downloadLink = document.createElement("a");
+            document.body.appendChild(downloadLink);
+
+            if(navigator.msSaveOrOpenBlob) {
+                // For IE
+                navigator.msSaveOrOpenBlob(blob, filename);
+            } else {
+                // For other browsers
+                downloadLink.href = url;
+                downloadLink.download = filename;
+                downloadLink.click();
+            }
+            
+            document.body.removeChild(downloadLink);
+        }
+    </script>
+</body>
+</html>
